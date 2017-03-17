@@ -1,0 +1,11 @@
+<h1>Your Order Is On The Way</h1>
+<h3>Your Order No: [<%=@order.id%>]</h6>
+<%total_price = 0%>
+<%LineItem.includes(:product).where(cart_id: @order.cart_id).find_each do |line| %>
+  <p>Name: <%= line.product.name%><br>
+  Description: <%= line.product.description%><br>
+  Price: <%= number_to_currency(line.product.price)%><br>
+  Quantity:<%= line.quantity%><br>
+  Price: <%= number_to_currency(line.product.price*line.quantity)%></p><br>
+  <%total_price += line.quantity*line.product.price%>
+<%end%>

@@ -1,0 +1,2 @@
+class MostOrdered < ApplicationRecord
+end

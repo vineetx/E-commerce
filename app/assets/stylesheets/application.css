@@ -1,0 +1,66 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+ .catalog_button {
+  float: right;
+  bottom: 2px;
+ }
+
+ #sidebar {
+  background-color: black;
+  width:200px;
+  height: 22.3%;
+  display: block;
+  position: absolute;
+  right: -200px;
+  top:20px;
+  transition: right 0.4s linear;
+ }
+
+ #sidebar ul {
+  margin:0px;
+ }
+
+ #sidebar ul li {
+  list-style: none;
+ }
+#sidebar.visible{
+  right:0px;
+  transition: right 0.4s linear;
+}
+ #sidebar ul li a {
+  background: #1C1E1F;
+  color: #ccc;
+  border-bottom: 1px solid #111;
+  display: block;
+  width: 180px;
+  padding: 10px;
+  text-decoration: none;
+ }
+#sidebar-btn {
+  display: inline-block;
+  vertical-align: middle;
+  width: 20px;
+  height: 15px;
+  cursor: pointer;
+  margin: 20px;
+}
+
+#sidebar-btn span{
+  height: 1px;
+  background-color: #111;
+  margin-bottom: 5px;
+  display: block;
+}
