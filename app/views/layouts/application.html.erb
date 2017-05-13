@@ -19,33 +19,19 @@
   <body>
     <header class="navbar navbar-fixed-top navbar-inverse">
         <ul class="nav navbar-nav navbar-left">
-          <li id="title" style="color: white;">Flipkart</li>
+          <li id="title" style="color: white;">CoMart</li>
+          <li><%= link_to 'Home', root_path, :class => 'navbar-link' %> </li>
         </ul>
         <ul class="nav navbar-nav navbar-right">
         <% if user_signed_in? %>
           <li><%= link_to 'Edit profile', edit_user_registration_path, :class => 'navbar-link' %> </li>
           <li><%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link'  %></li>
-          <li><div id="sidebar-btn">
-                <span></span>
-                <span></span>
-                <span></span>
-              </div>
-          </li>
         <% else %>
           <li><%= link_to "Sign up", new_user_registration_path, :class => 'navbar-link'  %> </li>
           <li><%= link_to "Login", new_user_session_path, :class => 'navbar-link'  %></li>
         <% end %>
         </ul>
     </header>
-    <div id="sidebar">
-      <ul>
-        <li><a href="#">Link1</a></li>
-        <li><a href="#">Link1</a></li>
-        <li><a href="#">Link1</a></li>
-        <li><a href="#">Link1</a></li>
-      </ul>
-    </div>
-
     <div id="sidebar-btn">
       <span></span>
       <span></span>
