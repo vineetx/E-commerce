@@ -1,4 +1,4 @@
-
+  
 <%= form_for order, url: {action: "create"}, remote: true do |f|%>
     <% if order.errors.any? %>
     <div id="error_explanation">
@@ -12,31 +12,32 @@
     </div>
     <% end %>
 
-  <div class="field">
-    <%= f.label :name %>
-    <%= f.text_field :name %>
-  </div>
+      <p>
+        <%= f.label :name %><br>
+        <%= f.text_field :name %>
+      </p>
 
 
-  <div class="field">
-    <%= f.label :address %>
+  <p>
+      <%= f.label :address %><br>
     New Address:
     <%= f.text_field :address, :class => "user-defined" %><br>
     <% if current_user.orders.count > 0%>
       Previous Address: <%= f.radio_button :address, current_user.orders.first.address %>
       <%= current_user.orders.first.address %>
     <%end%>
-  </div>
+  </p>
 
-  <div class="field">
-    <%= f.label :pincode %>
-    <%= f.text_field :pincode %>
-  </div>
+  <p>
+    <%= f.label :pincode %><br>
+    <%= f.number_field :pincode %>
+  </p>
 
-  <div class="field">
-    <%= f.label :mobile %>
+
+   <p>
+    <%= f.label :mobile %><br>
     <%= f.text_field :mobile %>
-  </div>
+  </p>
 
   <div class="actions">
     <%= f.submit %>

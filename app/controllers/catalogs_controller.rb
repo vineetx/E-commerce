@@ -7,7 +7,7 @@ class CatalogsController < ApplicationController
     @cart_items = current_cart.line_items
     @cart = current_cart
   end
-#Dir["/app/assets/carousel/*.jpg"]
+  
   private
 
     def parameter
